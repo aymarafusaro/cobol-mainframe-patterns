@@ -25,23 +25,23 @@ El ejercicio está diseñado para practicar estructuras y patrones habituales de
 
 ```text
 01-abm/
-├── CUSTOMER-ABM.CBL
+
+├── ABM-CLIENTES.CBL
 ├── README.md
-├── data/
-│   ├── input/
-│   │   ├── customer-master.dat
-│   │   └── customer-requests.dat
-│   └── output/
-│       ├── customer-master-new.dat
-│       └── abm-report.txt
-├── tests/
-└── deployment/
+├── datos/
+│   ├── entrada/
+│   │   ├── maestro-clientes.dat
+│   │   └── solicitudes-clientes.dat
+│   └── salida/
+│       ├── maestro-clientes-nuevo.dat
+│       └── reporte-abm.txt
+└── abm-clientes
 ```
 
 El layout de los registros se encuentra definido en:
 
 ```text
-../../copybooks/CUSTOMER-RECORD.CPY
+../../copybooks/REGISTRO-CLIENTE.CPY
 ```
 
 ## Formato de los archivos
@@ -133,7 +133,7 @@ El programa realiza las siguientes etapas:
 
 ## Casos de prueba
 
-El archivo `customer-requests.dat` contiene cinco solicitudes:
+El archivo `solicitudes-clientes.dat` contiene cinco solicitudes:
 
 | Operación    | Cliente | Resultado esperado         |
 | ------------ | ------- | -------------------------- |
@@ -145,7 +145,7 @@ El archivo `customer-requests.dat` contiene cinco solicitudes:
 
 ## Resultado esperado
 
-El procesamiento debe producir:
+El procesamiento produce:
 
 ```text
 ALTA       000006 OK
@@ -158,13 +158,13 @@ MODIFICAR  000999 ERROR: CLIENTE NO ENCONTRADO
 Resumen:
 
 ```text
-CLIENTES CARGADOS:    0005
-SOLICITUDES:          0005
-ALTAS:                0001
-MODIFICACIONES:       0001
-BAJAS:                0001
-ERRORES:              0002
-RETURN-CODE:         +000000000
+CLIENTES CARGADOS:       0005
+SOLICITUDES PROCESADAS:  0005
+ALTAS:                   0001
+MODIFICACIONES:          0001
+BAJAS:                   0001
+ERRORES:                 0002
+RETURN-CODE:            +000000000
 ```
 
 ## Compilación
@@ -173,23 +173,23 @@ Desde la raíz del repositorio:
 
 ```bash
 cobc -x -free \
-    -o lessons/01-abm/customer-abm \
-    lessons/01-abm/CUSTOMER-ABM.CBL
+    -o lecciones/01-abm/abm-clientes \
+    lecciones/01-abm/ABM-CLIENTES.CBL
 ```
 
 ## Ejecución
 
-Antes de ejecutar nuevamente el programa:
+Antes de ejecutar nuevamente el programa, eliminar los archivos de salida generados en la ejecución anterior:
 
 ```bash
-rm -f lessons/01-abm/data/output/customer-master-new.dat
-rm -f lessons/01-abm/data/output/abm-report.txt
+rm -f lecciones/01-abm/datos/salida/maestro-clientes-nuevo.dat
+rm -f lecciones/01-abm/datos/salida/reporte-abm.txt
 ```
 
-Luego:
+Luego ejecutar:
 
 ```bash
-./lessons/01-abm/customer-abm
+./lecciones/01-abm/abm-clientes
 ```
 
 ## Verificación del archivo maestro
@@ -197,7 +197,7 @@ Luego:
 El archivo generado debe contener 5 registros de 50 bytes:
 
 ```bash
-wc -c lessons/01-abm/data/output/customer-master-new.dat
+wc -c lecciones/01-abm/datos/salida/maestro-clientes-nuevo.dat
 ```
 
 Resultado esperado:
@@ -219,7 +219,7 @@ El archivo no utiliza separadores ni saltos de línea entre registros.
 El reporte contiene una línea por cada solicitud:
 
 ```bash
-wc -l lessons/01-abm/data/output/abm-report.txt
+wc -l lecciones/01-abm/datos/salida/reporte-abm.txt
 ```
 
 Resultado esperado:

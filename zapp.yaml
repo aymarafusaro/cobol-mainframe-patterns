@@ -1,11 +1,15 @@
-name: Generated ZAPP document
+name: Configuración ZAPP del proyecto
+
 description: >-
-  Note, that this default file will search all your local folders in all your
-  open VS Code workspaces and can be highly inefficient. Modify the "locations"
-  entries to be as specific as possible. Add a new entry of type "MVS" to
-  specify remote locations. See the user documentation for more details:
+  Configuración de IBM Z Open Editor para el proyecto de patrones COBOL
+  Mainframe. La búsqueda se realiza sobre las carpetas locales especificadas
+  en las entradas de "locations". Para utilizar ubicaciones remotas de
+  Mainframe, se puede agregar una entrada de tipo "MVS". Para más información,
+  consultar la documentación de IBM Z Open Editor:
   https://ibm.github.io/zopeneditor-about/Docs/setting_propertygroup.html
+
 author: IBM Z Open Editor
+
 propertyGroups:
   - name: search-all
     libraries:
