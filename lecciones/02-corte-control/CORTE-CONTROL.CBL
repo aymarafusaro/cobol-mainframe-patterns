@@ -93,7 +93,7 @@
            MOVE SPACES
                TO WS-LINEA-REPORTE
 
-           MOVE "============================================================"
+           MOVE "======================================================"
                TO WS-LINEA-REPORTE
            WRITE REGISTRO-REPORTE
                FROM WS-LINEA-REPORTE
