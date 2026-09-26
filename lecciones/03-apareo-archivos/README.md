@@ -57,10 +57,11 @@ Cada registro tiene una longitud fija de 36 caracteres.
 
 Estructura:
 
-Posición	Campo	        Longitud	Descripción
-1-6	        CUENTA-MAESTRO	6	        Número de cuenta
-7-26	    NOMBRE-MAESTRO	20	        Nombre del cliente
-27-36	    SALDO-MAESTRO	10	        Saldo con 2 decimales implícitos
+| Posición | Campo | Longitud | Descripción |
+|---|---|---|---|
+| 1-6 | CUENTA-MAESTRO | 6 | Número de cuenta |
+| 7-26 | NOMBRE-MAESTRO | 20 | Nombre del cliente |
+| 27-36 | SALDO-MAESTRO | 10 | Saldo con 2 decimales implícitos |
 
 Definición COBOL:
 
