@@ -11,7 +11,10 @@ Portfolio práctico de COBOL orientado a patrones clásicos de procesamiento bat
   - Manejo de errores
 
 - **Lección 02 — Corte de control**
-  - En desarrollo
+  - Completada
+  - Procesamiento por grupos
+  - Acumuladores por cuenta
+  - Totales generales
 
 - **Lección 03 — Apareo de archivos**
   - Planificada
