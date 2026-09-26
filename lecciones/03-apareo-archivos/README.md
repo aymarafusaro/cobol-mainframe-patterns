@@ -86,11 +86,12 @@ Cada registro tiene una longitud fija de 20 caracteres.
 
 Estructura:
 
-Posición	Campo	               Longitud   Descripción
-1-6         CUENTA-MOVIMIENTO      6          Número de cuenta
-7           TIPO-MOVIMIENTO        1          C = crédito / D = débito
-8-19        IMPORTE-MOVIMIENTO     12         Importe con 2 decimales implícitos
-20          RESERVADO-MOVIMIENTO   1          Campo reservado
+| Posición | Campo | Longitud | Descripción |
+|---|---|---|---|
+| 1-6 | CUENTA-MOVIMIENTO | 6 | Número de cuenta |
+| 7 | TIPO-MOVIMIENTO | 1 | C = crédito / D = débito |
+| 8-19 | IMPORTE-MOVIMIENTO | 12 | Importe con 2 decimales implícitos |
+| 20 | RESERVADO-MOVIMIENTO | 1 | Campo reservado |
 
 Definición COBOL:
 
